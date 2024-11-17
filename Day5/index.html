@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Day by Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .banner {
+            background-color: #0077B5;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fade-in 1s ease-out;
+            width: 80%; /* Set width of banner */
+        }
+        h1 {
+            margin: 0;
+            font-size: 15px;
+            animation: slide-down 1s ease-out;
+        }
+        p {
+            font-size: 10px;
+        }
+        .question-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; /* Spread columns evenly */
+            flex-wrap: wrap; /* Allow wrapping to next row */
+            width: 80%; /* Set width of container */
+        }
+        .column {
+            width: 48%; /* Set width of each column */
+        }
+        .question {
+            padding: 10px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slide-up 1s ease-out;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slide-down {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        @keyframes slide-up {
+            from { transform: translateY(50px); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Happy DSA Day by Day 5!</h1>
+        <p>Let's solve some DSA problems together!</p>
+    </div>
+
+    <div class="question-container">
+        <div class="column">
+            <div class="question">
+                <h2>Question 1: 704. Binary Search</h2>
+                <p>Approach: Implement binary search to find the index of a given number.
+                <ul>
+                    <li>Calculate the middle index: <code>mid = (start + end) / 2</code></li>
+                    <li>Compare the middle element with the target.</li>
+                    <li>If the middle element is the target, return its index.</li>
+                    <li>If the middle element is greater than the target, search in the left half by updating the end pointer.</li>
+                    <li>If the middle element is less than the target, search in the right half by updating the start pointer.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 3: Implement Lower Bound</h2>
+                <p>Approach: Use binary search to find the first position where the number is not less than the key.
+                <ul>
+                    <li>Initialize start, end, and ans (set to -1).</li>
+                    <li>Run a while loop until start is less than or equal to end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>If the middle element is greater than or equal to the key, update ans and move the end pointer to <code>mid - 1</code>.</li>
+                    <li>If the middle element is less than the key, move the start pointer to <code>mid + 1</code>.</li>
+                    <li>Return ans after the loop ends.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 5: Find First and Last Position of Element in Sorted Array</h2>
+                <p>Approach: Use binary search twice to find the first and last occurrence.
+                <ul>
+                    <li>First binary search for the first occurrence: Check if mid element is equal to the target and update the end pointer to <code>mid - 1</code> to find the first position.</li>
+                    <li>Second binary search for the last occurrence: Check if mid element is equal to the target and update the start pointer to <code>mid + 1</code> to find the last position.</li>
+                    <li>Return both indices.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 7: Number of Occurrences</h2>
+                <p>Approach: Use a loop to traverse the array and count the number of times the target element appears.
+                <ul>
+                    <li>Initialize count to 0.</li>
+                    <li>Loop through the array and check if each element is equal to the target.</li>
+                    <li>If equal, increment the count.</li>
+                    <li>Return the count.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 9: Search in Rotated Sorted Array</h2>
+                <p>Approach: Use binary search with additional conditions to handle the rotated part of the array.
+                <ul>
+                    <li>Calculate the middle index: <code>mid = (start + end) / 2</code>.</li>
+                    <li>Check if mid element is the target, return its index.</li>
+                    <li>Determine which part is sorted:
+                        <ul>
+                            <li>If the left part is sorted, check if the target lies within this range. If yes, adjust end pointer to <code>mid - 1</code>, otherwise adjust start pointer to <code>mid + 1</code>.</li>
+                            <li>If the right part is sorted, check if the target lies within this range. If yes, adjust start pointer to <code>mid + 1</code>, otherwise adjust end pointer to <code>mid - 1</code>.</li>
+                        </ul>
+                    </li>
+                    <li>Continue until the target is found or the start pointer exceeds the end pointer.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 11: 81. Search in Rotated Sorted Array II</h2>
+                <p>Approach: Similar to Question 9, but with an additional condition to handle duplicates.
+                <ul>
+                    <li>Calculate the middle index: <code>mid = (start + end) / 2</code>.</li>
+                    <li>Check if mid element is the target, return true.</li>
+                    <li>If there are duplicates, increment start and decrement end until they are different from the mid element.</li>
+                    <li>Determine which part is sorted and proceed as in Question 9.</li>
+                    <li>Continue until the target is found or the start pointer exceeds the end pointer.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="question">
+                <h2>Question 2: Implement Lower Bound</h2>
+                <p>Approach: Similar to Question 3. Use a binary search to find the first position where the number is not less than the key.
+                <ul>
+                    <li>Initialize start, end, and ans (set to -1).</li>
+                    <li>Run a while loop until start is less than or equal to end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>If the middle element is greater than or equal to the key, update ans and move the end pointer to <code>mid - 1</code>.</li>
+                    <li>If the middle element is less than the key, move the start pointer to <code>mid + 1</code>.</li>
+                    <li>Return ans after the loop ends.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 4: Search Insert Position</h2>
+                <p>Approach: Use binary search to find the target or the position to insert it.
+                <ul>
+                    <li>Initialize start and end pointers.</li>
+                    <li>Run a while loop until start is less than or equal to end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>If the middle element is the target, return mid.</li>
+                    <li>If the middle element is less than the target, move the start pointer to <code>mid + 1</code>.</li>
+                    <li>Otherwise, move the end pointer to <code>mid - 1</code>.</li>
+                    <li>If the target is not found, return the start pointer as the insert position.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 6: Searching an Element in a Sorted Array</h2>
+                <p>Approach: Use binary search to find the target element in the sorted array.
+                <ul>
+                    <li>Initialize start and end pointers.</li>
+                    <li>Run a while loop until start is less than or equal to end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>If the middle element is the target, return mid.</li>
+                    <li>If the middle element is greater than the target, move the end pointer to <code>mid - 1</code>.</li>
+                    <li>If the middle element is less than the target, move the start pointer to <code>mid + 1</code>.</li>
+                    <li>Continue until the target is found or the start pointer exceeds the end pointer.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 8: 153. Find Minimum in Rotated Sorted Array</h2>
+                <p>Approach: Use binary search and compare mid with the first element.
+                <ul>
+                    <li>Initialize start and end pointers.</li>
+                    <li>Run a while loop until start is less than end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>Compare mid element with the first element.</li>
+                    <li>If mid element is greater, the minimum is in the right half, adjust start pointer to <code>mid + 1</code>.</li>
+                    <li>If mid element is less, the minimum is in the left half, adjust end pointer to <code>mid</code>.</li>
+                    <li>Continue until start equals end, which is the index of the minimum element.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 10: Rotation</h2>
+                <p>Approach: Use binary search with conditions to determine the rotation point.
+                <ul>
+                    <li>Initialize start and end pointers.</li>
+                    <li>Run a while loop until start is less than end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>Compare mid element with the end element.</li>
+                    <li>If mid element is greater than the end element, the rotation point is in the right half, adjust start pointer to <code>mid + 1</code>.</li>
+                    <li>If mid element is less than or equal to the end element, the rotation point is in the left half, adjust end pointer to <code>mid</code>.</li>
+                    <li>Continue until start equals end, which is the rotation point.</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="question">
+                <h2>Question 12: Search Single Element in a Sorted Array</h2>
+                <p>Approach: Use a modified binary search to find the single non-duplicate element.
+                <ul>
+                    <li>Initialize start and end pointers.</li>
+                    <li>Run a while loop until start is less than end.</li>
+                    <li>Calculate the mid index: <code>mid = (start + end) / 2</code></li>
+                    <li>Check if mid is even or odd to compare pairs of elements.</li>
+                    <li>If the pair matches, move the start pointer to mid + 1.</li>
+                    <li>If the pair does not match, move the end pointer to mid.</li>
+                    <li>Continue until start equals end, which is the index of the single element.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

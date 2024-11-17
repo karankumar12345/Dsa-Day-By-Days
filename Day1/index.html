@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA Day by Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .banner {
+            background-color: #0077B5;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fade-in 1s ease-out;
+            width: 80%;
+        }
+        h1 {
+            margin: 0;
+            font-size: 20px;
+            animation: slide-down 1s ease-out;
+        }
+        p {
+            font-size: 14px;
+        }
+        .question-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 80%;
+        }
+        .column {
+            width: 48%;
+        }
+        .question {
+            padding: 10px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slide-up 1s ease-out;
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slide-down {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        @keyframes slide-up {
+            from { transform: translateY(50px); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Happy DSA Day by Day 1!</h1>
+        <p>Let's solve some DSA problems together!</p>
+    </div>
+
+    <div class="question-container">
+        <div class="column">
+            <div class="question">
+                <h2>Question 1: 3Sum</h2>
+                <p><strong>What we learn:</strong> In this problem, we learned how to use the two-pointer technique to find triplets that sum to zero in a sorted array. This technique improves the time complexity from O(n^3) to O(n^2) by iterating over the array and using two pointers to find pairs that sum to a target value.</p>
+            </div>
+
+            <div class="question">
+                <h2>Question 2: Sort Colors</h2>
+                <p><strong>What we learn:</strong> This problem teaches us how to use the Dutch National Flag algorithm to sort an array containing three distinct values (e.g., 0, 1, 2) in linear time O(n). We count the occurrences of each value and overwrite the array based on these counts.</p>
+            </div>
+
+            <div class="question">
+                <h2>Question 3: Next Permutation</h2>
+                <p><strong>What we learn:</strong> The next permutation problem helps us understand how to find the next lexicographical permutation of an array. The solution involves finding the largest index i where nums[i] < nums[i + 1], swapping it with the smallest number larger than nums[i], and then reversing the suffix to get the next permutation in O(n) time.</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="question">
+                <h2>Question 4: Product of Array Except Self</h2>
+                <p><strong>What we learn:</strong> In this problem, we learn how to solve the "Product of Array Except Self" using two passes over the array, one from the left and one from the right. In the first pass, we calculate the product of all elements to the left of the current index, and in the second pass, we multiply by the product of all elements to the right. This solution runs in O(n) time without using division and in constant space (excluding the output array).</p>
+            </div>
+
+            <div class="question">
+                <h2>Question 5: Range Addition Queries</h2>
+                <p><strong>What we learn:</strong> This problem teaches us how to efficiently apply multiple range updates to a matrix using the concept of difference arrays. We can use a matrix to track updates and apply them in O(n^2) time. The solution iterates through the list of queries and adds values to the matrix using prefix sums to avoid unnecessary recalculations, which improves the time complexity.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
