@@ -19,13 +19,29 @@
             flex-direction: column;
             align-items: center;
         }
+        nav {
+            background-color: var(--primary-color);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         .banner {
             background-color: var(--primary-color);
             color: var(--secondary-color);
             padding: 20px;
             text-align: center;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: fade-in 1s ease-out;
             width: 80%;
@@ -55,6 +71,20 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: slide-up 1s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .question:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        ul {
+            padding-left: 20px;
         }
         @keyframes fade-in {
             from { opacity: 0; }
@@ -77,22 +107,26 @@
     </style>
 </head>
 <body>
+
+
     <div class="banner">
-        <h1>Happy DSA Day by Day 5!</h1>
+        <h1>Happy DSA Day by Day 8!</h1>
         <p>Let's solve some DSA problems together!</p>
     </div>
 
     <div class="question-container">
         <div class="column">
             <div class="question">
-                <h2>Question 1: Longest Valid Parentheses</h2>
-                <p><strong>What we learn:</strong> In this problem, we focus on the use of stacks or two-pointer techniques to validate and find the length of the longest valid substring of parentheses. This helps us improve our problem-solving skills in balanced parentheses problems and edge case handling.</p>
+                <h2>Question 1:Sort a Stack</h2>
+                <p><strong>What we learn:</strong> Learn to handle overlapping intervals and optimize event scheduling algorithms.</p>
+                <p><strong>Challenge:</strong> Implement an optimized approach with \(O(n)\) complexity.</p>
             </div>
         </div>
         <div class="column">
             <div class="question">
-                <h2>Question 2: Insert Intervals</h2>
-                <p><strong>What we learn:</strong> This question teaches interval manipulation, merging overlapping intervals, and sorting intervals efficiently. It strengthens our understanding of greedy algorithms and array traversal techniques.</p>
+                <h2>Question 2: Permutations</h2>
+                <p><strong>What we learn:</strong> Understand binary search in a complex setting and merge operations.</p>
+                <p><strong>Challenge:</strong> Ensure operations like merging are efficient and handle edge cases effectively.</p>
             </div>
         </div>
     </div>

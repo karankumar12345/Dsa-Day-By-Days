@@ -10,6 +10,7 @@
             --secondary-color: #FFFFFF;
             --background-color: #f0f0f0;
         }
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,13 +20,29 @@
             flex-direction: column;
             align-items: center;
         }
+        nav {
+            background-color: var(--primary-color);
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         .banner {
             background-color: var(--primary-color);
             color: var(--secondary-color);
             padding: 20px;
             text-align: center;
             border-radius: 8px;
-            margin-bottom: 20px;
+            margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: fade-in 1s ease-out;
             width: 80%;
@@ -55,6 +72,20 @@
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: slide-up 1s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .question:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        ul {
+            padding-left: 20px;
         }
         @keyframes fade-in {
             from { opacity: 0; }
@@ -78,21 +109,28 @@
 </head>
 <body>
     <div class="banner">
-        <h1>Happy DSA Day by Day 5!</h1>
+        <h1>Happy DSA Day by Day 12!</h1>
         <p>Let's solve some DSA problems together!</p>
     </div>
-
     <div class="question-container">
         <div class="column">
             <div class="question">
-                <h2>Question 1: Longest Valid Parentheses</h2>
-                <p><strong>What we learn:</strong> In this problem, we focus on the use of stacks or two-pointer techniques to validate and find the length of the longest valid substring of parentheses. This helps us improve our problem-solving skills in balanced parentheses problems and edge case handling.</p>
+                <h2>Question 1: Binary Tree Preorder Traversal</h2>
+                <p><strong>What we learn:</strong> Learn how to traverse a binary tree in the "root-left-right" order using recursion and iteration. Analyze its applications, such as creating a prefix expression.</p>
+            </div>
+            <div class="question">
+                <h2>Question 2: Binary Tree Inorder Traversal</h2>
+                <p><strong>What we learn:</strong> Learn how to traverse a binary tree in the "left-root-right" order and understand its significance in retrieving sorted data from a BST.</p>
             </div>
         </div>
         <div class="column">
             <div class="question">
-                <h2>Question 2: Insert Intervals</h2>
-                <p><strong>What we learn:</strong> This question teaches interval manipulation, merging overlapping intervals, and sorting intervals efficiently. It strengthens our understanding of greedy algorithms and array traversal techniques.</p>
+                <h2>Question 3: Binary Tree Postorder Traversal</h2>
+                <p><strong>What we learn:</strong> Learn how to traverse a binary tree in the "left-right-root" order and its applications in deleting nodes or evaluating expressions.</p>
+            </div>
+            <div class="question">
+                <h2>Question 4: Preorder, Postorder, Inorder in a single traverse</h2>
+                <p><strong>What we learn:</strong> Optimize the traversal process to compute all three orders in a single pass, leveraging data structures like stacks or recursion.</p>
             </div>
         </div>
     </div>

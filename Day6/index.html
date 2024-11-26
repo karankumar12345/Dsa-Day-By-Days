@@ -56,6 +56,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: slide-up 1s ease-out;
         }
+        h2 {
+            margin-top: 0;
+            font-size: 16px;
+            color: var(--primary-color);
+        }
+        ul {
+            padding-left: 20px;
+        }
         @keyframes fade-in {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -78,21 +86,33 @@
 </head>
 <body>
     <div class="banner">
-        <h1>Happy DSA Day by Day 5!</h1>
+        <h1>Happy DSA Day by Day 6!</h1>
         <p>Let's solve some DSA problems together!</p>
     </div>
 
     <div class="question-container">
         <div class="column">
             <div class="question">
-                <h2>Question 1: Longest Valid Parentheses</h2>
-                <p><strong>What we learn:</strong> In this problem, we focus on the use of stacks or two-pointer techniques to validate and find the length of the longest valid substring of parentheses. This helps us improve our problem-solving skills in balanced parentheses problems and edge case handling.</p>
+                <h2>Question 1: Sum of Subarray Minimums</h2>
+                <p><strong>What we learn:</strong></p>
+                <ul>
+                    <li>Understanding how to calculate the contribution of elements in subarrays.</li>
+                    <li>Using monotonic stacks to find the nearest smaller elements efficiently.</li>
+                    <li>Optimizing brute force solutions for array-based problems.</li>
+                </ul>
+                <p><strong>Challenge:</strong> Implement the optimized approach with \(O(n)\) complexity.</p>
             </div>
         </div>
         <div class="column">
             <div class="question">
-                <h2>Question 2: Insert Intervals</h2>
-                <p><strong>What we learn:</strong> This question teaches interval manipulation, merging overlapping intervals, and sorting intervals efficiently. It strengthens our understanding of greedy algorithms and array traversal techniques.</p>
+                <h2>Question 2: Queue using Two Stacks</h2>
+                <p><strong>What we learn:</strong></p>
+                <ul>
+                    <li>How to implement a queue using stack operations.</li>
+                    <li>Understanding the concept of amortized complexity.</li>
+                    <li>Practicing data structure transformation and adaptability.</li>
+                </ul>
+                <p><strong>Challenge:</strong> Ensure all operations (enqueue, dequeue) are efficient and handle edge cases.</p>
             </div>
         </div>
     </div>
